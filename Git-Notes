@@ -80,4 +80,48 @@ Phase-3
 		- git log --author="swapnil"
 		- git log --grep="commit msg"		
 		- git log --oneline (if we want to see logs on high level that time we can use this command ie. only commit ids and msg)
+		
+=========
+Phase-4
+=========
+ 
+#If you want downlod remote repository then apply this commnad (It is first time activity).
+	$ git clone <repo-url>
+
+#If you want to download modified content from remote repo then apply this command, after git pull your modified changes comes in working area.
+	$ git pull
+
+#If you want to download modified content from remote repo then apply this command, But you dont want to merge modified content in your working area then apply this command
+	$ git fetch
+	$ git merge
+
+# Skip staging
+	git commit -am "submit all pending changes"
+
+=======
+Phase-5
+=======
+# GIT Commands
+
+1.
+	$ git status 
+
+	$ git diff <filename>
+
+	$ git diff --staged <filename> 
+
+2. Deleting a file
+
+	A.) $ git rm <filename>
+	    $ git commit <filename> -m "comment"
+	    $ git push
+       
+4. Renaming a file/folder
+	A.) $ git mv Login.java <new-name>
+	    $ git commit -m "rename Login"
+	    $ git push
+
+
+	
+ 
 
