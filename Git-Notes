@@ -98,6 +98,35 @@ Phase-4
 # Skip staging
 	git commit -am "submit all pending changes"
 
+# 
+Creating up Local repository
+1. create/initialize a local repository with 'git init' command
+	$ mkdir <create-folder>
+	$ cd <folder-name>
+	$ git init
+	$ vim filename
+	$ git add . or filename
+	$ git commit -m "commit msg"
+(Note - Create same folder name repositry in the github server)
+	$ git remote add <repo-name> <repo-url>
+	$ git push <repo-name> 
+  	$ git push --set-upstream <repo-name> master (optional)
+
+2. Observe the local repository
+	$ ls -a 
+
+3.create some source code.. ex: vim Login.java
+
+4.Adding the file to STAGE.
+	$ git add <filename>
+
+5.Commiting the file to local repository
+	$ git commit <filename> -m "lgoin module code"
+
+6.Check the log of Login.java using log command.
+	$ git log <filename>
+
+
 =======
 Phase-5
 =======
@@ -122,6 +151,25 @@ Phase-5
 	    $ git push
 
 
-	
- 
+=======
+Phase-6
+=======
+
+# Undoing the changes:
+
+# undo/revert local changes from source area in exits files. ie. present in remote repo.
+	$ git checkout <filename>
+
+# Unstage the changes from STAGE area
+	$ git reset HEAD <filename>
+
+# Move changes from .git to source area 
+	$ git reset --mixed HEAD~1
+
+# Move changes from .git to stage area
+	$ git reset --soft HEAD~1
+
+# Remove changes from everywhere
+	$ git reset --hard HEAD~1
+
 
