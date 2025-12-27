@@ -257,3 +257,6 @@ git push origin -d <branchName> or git push origin :<branchName>
 
 git cherry-pick <sha-value>
 
+git stash
+
+git stash pop
