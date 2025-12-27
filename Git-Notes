@@ -172,4 +172,88 @@ Phase-6
 # Remove changes from everywhere
 	$ git reset --hard HEAD~1
 
+=======
+Phase-7
+=======
+
+# BRANCHING
+	A. What is a branch?
+	B. Why and When we create a branch?
+	C. Branching Stratogy overview
+
+
+# List all the branches
+	$ git branch
+	
+# Creating a new branch
+	$ git branch new_branch_name
+
+# List all remote branches
+	$ git branch -r
+
+# Switching to a newly created branch
+	$ git checkout new_branch_name
+
+# Creating and switching to a newly created branch
+	$ git checkout -b new_branch_name
+
+# First push newly created branch into remote repo
+	$ git remote add <repo-name> <repo-url>
+	$ git push --set-upstream <repository-name> <branch-name>
+		or
+	$ git push --all
+		or
+	$ git push -u origin --all
+
+# List all remote branches
+	$ git branch -r
+
+# Merge files from source branch to target branch
+	$ git merge <source-branch-name>
+
+# HEAD
+HEAD is a pointer in git which
+	- Always points to the latest commit in the repository
+	- Always points to tip of the current reposiotory
+	- Always points to parent of the next commit
+
+Day-8
+======
+Merging:
+======
+# FAST-FORWARD MERGE
+
+Excercise:
+===========
+# List all the branches
+	$ git branch
+
+# Create a new branch
+	$ git branch dev_1.2.3
+
+# Add some changes to newely created branch i.e dev_1.2.3
+	$ Modify/Add some files	
+	$ git add	
+	$ git commit 
+
+# Now merge the code from dev_1.2.3 to master branch
+  Before merge, make sure that you are on target branch i.e master (source branch: dev_1.2.3)
+	$ git checkout master
+
+# You have master code in source since currently checkout branch is master. Now bring/merge the changes from dev_1.2.3 to master by running below command. 
+Git merge command merges the changes from dev_1.2.3 to master.
+
+	$ git merge dev_1.2.3
+
+# observe the changes from dev_1.2.3 into master branch.
+
+# git push --all
+
+# How to delete branch from local
+git branch -d/-D <branchName> (the -D option is for force deletion)
+
+How to delete remote branch from local
+git push origin -d <branchName> or git push origin :<branchName>
+
+git cherry-pick <sha-value>
 
